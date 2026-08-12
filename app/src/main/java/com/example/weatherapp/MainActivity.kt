@@ -12,7 +12,7 @@ import com.android.volley.toolbox.Volley
 
 class MainActivity : AppCompatActivity() {
 
-    // IMPORTANT: Paste the API key your team generated here
+    //API Connection
     private val apiKey = "728020102a1f44c9b8e31751261208"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             val jsonObjectRequest = JsonObjectRequest(
                 Request.Method.GET, url, null,
                 { response ->
-                    // 6. Parse JSON on Success
+                    // Parse JSON on Success
                     try {
                         val locationObj = response.getJSONObject("location")
                         val cityName = locationObj.getString("name")
