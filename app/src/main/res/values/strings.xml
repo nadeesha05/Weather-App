@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="title_weather_app">⛅ Weather App</string>
+    <string name="hint_enter_city">Enter city name (e.g. Colombo)</string>
+    <string name="btn_search_weather">Search Weather</string>
+    <string name="label_city">City: %1$s</string>
+    <string name="label_temperature">🌡️ Temperature: %1$.1f°C</string>
+    <string name="label_condition">☁️ Condition: %1$s</string>
+    <string name="label_humidity">💧 Humidity: %1$d%%</string>
+    <string name="label_wind_speed">💨 Wind Speed: %1$.1f kph</string>
+    <string name="error_empty_city">Please enter a city.</string>
+    <string name="error_invalid_city">Invalid city name.</string>
+    <string name="error_no_connection">Check your internet connection.</string>
+    <string name="error_api_failure">Unable to retrieve weather information.</string>
+    <string name="error_parsing">Error parsing weather data.</string>
 </resources>

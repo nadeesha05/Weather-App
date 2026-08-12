@@ -4,16 +4,13 @@ plugins {
 
 android {
     namespace = "com.example.weatherapp"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.weatherapp"
         minSdk = 24
-        targetSdk = 36
+        //noinspection EditedTargetSdk
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -42,6 +39,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-    implementation("com.android.volley:volley:1.2.1")
-    implementation("androidx.cardview:cardview:1.0.0")
+    implementation(libs.volley)
+    implementation(libs.androidx.cardview)
 }

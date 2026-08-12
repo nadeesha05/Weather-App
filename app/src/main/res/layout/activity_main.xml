@@ -7,6 +7,7 @@
     android:fillViewport="true">
 
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⛅ Weather App"
+            android:text="@string/title_weather_app"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#0D47A1"
@@ -28,10 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_bg"
-            android:hint="Enter city name (e.g. Colombo)"
+            android:hint="@string/hint_enter_city"
             android:inputType="text"
             android:textColor="#212121"
-            android:textColorHint="#90A4AE" />
+            android:textColorHint="#90A4AE"
+            android:autofillHints="postalAddress" />
 
         <Button
             android:id="@+id/btnSearchWeather"
@@ -39,7 +41,7 @@
             android:layout_height="52dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_bg"
-            android:text="Search Weather"
+            android:text="@string/btn_search_weather"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textAllCaps="false" />
@@ -74,7 +76,7 @@
                     android:id="@+id/tvCityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="City: --"
+                    android:text="@string/label_city"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="#0D47A1" />
@@ -83,7 +85,7 @@
                     android:id="@+id/tvTemperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🌡️ Temperature: --"
+                    android:text="@string/label_temperature"
                     android:textSize="18sp"
                     android:textColor="#37474F"
                     android:layout_marginTop="12dp" />
@@ -92,7 +94,7 @@
                     android:id="@+id/tvCondition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="☁️ Condition: --"
+                    android:text="@string/label_condition"
                     android:textSize="16sp"
                     android:textColor="#37474F"
                     android:layout_marginTop="8dp" />
@@ -101,7 +103,7 @@
                     android:id="@+id/tvHumidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="💧 Humidity: --"
+                    android:text="@string/label_humidity"
                     android:textSize="16sp"
                     android:textColor="#37474F"
                     android:layout_marginTop="8dp" />
@@ -110,7 +112,7 @@
                     android:id="@+id/tvWindSpeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="💨 Wind Speed: --"
+                    android:text="@string/label_wind_speed"
                     android:textSize="16sp"
                     android:textColor="#37474F"
                     android:layout_marginTop="8dp" />
