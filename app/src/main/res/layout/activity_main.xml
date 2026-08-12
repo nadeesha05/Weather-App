@@ -1,19 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#E3F2FD"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⛅ Weather App"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/etCityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:hint="Enter city name (e.g. Colombo)"
+            android:inputType="text"
+            android:textColor="#212121"
+            android:textColorHint="#90A4AE" />
+
+        <Button
+            android:id="@+id/btnSearchWeather"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_bg"
+            android:text="Search Weather"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#D32F2F"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City: --"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1" />
+
+                <TextView
+                    android:id="@+id/tvTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Temperature: --"
+                    android:textSize="18sp"
+                    android:textColor="#37474F"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☁️ Condition: --"
+                    android:textSize="16sp"
+                    android:textColor="#37474F"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Humidity: --"
+                    android:textSize="16sp"
+                    android:textColor="#37474F"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvWindSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💨 Wind Speed: --"
+                    android:textSize="16sp"
+                    android:textColor="#37474F"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
