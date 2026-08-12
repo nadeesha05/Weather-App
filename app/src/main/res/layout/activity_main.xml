@@ -30,6 +30,7 @@
             android:background="@drawable/edittext_bg"
             android:hint="Enter city name (e.g. Colombo)"
             android:inputType="text"
+            android:textColor="#212121"
             android:textColorHint="#90A4AE" />
 
         <Button
